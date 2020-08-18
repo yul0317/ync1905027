@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*============================================ 기본 ============================================*/
+/*===============================================================================================*/
+html {position: relative; min-height: 100%;}
+body {height:100%; padding-bottom: 0px;
+/* Margin bottom by footer height */
+margin-bottom: 130px;}
+/*============================================ 네비 ============================================*/
+/*===============================================================================================*/
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {  position: absolute;  top: 30;  right: 0;  left: 0;  z-index: 20;}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {  padding-right: 0;  padding-left: 0;}
+.navbar-wrapper .navbar {  padding-right: 15px;  padding-left: 15px;}
+.navbar-wrapper .navbar .container {  width: auto;}
+.navbar-form a{text-decoration:none; color:#fff; margin-right:10px;}
+.navbar-brand{font-size:25px;}
+/*========================================== 헤더 로고 ==========================================*/
+/*===============================================================================================*/
+.logo{text-align:center; padding-top:30px; width:100%;}
+.logo img{width:200px;}
+/*========================================== 메인콘텐츠 위치 ==========================================*/
+/*===============================================================================================*/
+.main_content {padding-top:90px;}
+/*============================================= 푸터 =============================================*/
+/*===============================================================================================*/
+.footer {position: absolute;  bottom: 0;  width: 100%;
+/* Set the fixed height of the footer here */
+height: 130px;background-color: #333333;margin-top:0;}
+.footercontainer {width: auto; max-width: 100%; padding-top:50px;}
+.footercontainer .text-muted {text-align:center; color:white; font-size:20px;}
+@media (min-width: 768px) {/*============================== 768~ 사이즈 ============================*/
+.navbar-brand{display:none;}
+/* Navbar positioning foo */
+.navbar-wrapper {margin-top: 30px;}
+.navbar-wrapper .container {padding-right: 15px;padding-left: 15px;}
+.navbar-wrapper .navbar {padding-right: 0; padding-left: 0;}
+/* The navbar becomes detached from the top, so we round the corners */
+.navbar-wrapper .navbar {border-radius: 4px;}
+}
+@media (max-width:767px){/*============================== ~767 사이즈 ============================*/
+.logo{display:none;}
+ .main_content {padding-top:60px;}
+}
